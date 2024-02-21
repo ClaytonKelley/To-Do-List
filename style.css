@@ -8,12 +8,14 @@ layer(demo.support);
 }
 
 body{
-  background: url("https://banner2.cleanpng.com/20181128/lkv/kisspng-vector-graphics-clip-art-image-flame-fire-cropped-logo-png-www-kaminipechi24-ru-5bfe5ea470a9e1.9518393715433970284615.jpg") repeat;
-  -webkit-animation: scrolling 15s linear infinite;
-  -moz-animation: scrolling 15s linear infinite;
-  -o-animation: scrolling 15s linear infinite;
-  animation: scrolling 15s linear infinite;
+  background: url("https://t3.ftcdn.net/jpg/04/95/72/14/360_F_495721436_zGQyX6WwwApIQdmRRlCsrRY23GF1KUez.jpg") repeat;
+  -webkit-animation: scrolling 30s linear infinite;
+  -moz-animation: scrolling 30s linear infinite;
+  -o-animation: scrolling 30s linear infinite;
+  animation: scrolling 30s linear infinite;
   background-size: 25%;
+  background-blend-mode: multiply;
+  background-color: rgb(77, 166, 238);
 }
 
 @-webkit-keyframes scrolling {
@@ -71,9 +73,6 @@ ul {
 }
 
 #addItemForm {
-  display: flex;
-  align-self: center;
-  margin-left: auto;
-  margin-right: auto;
-  justify-items: center;
+  text-align: center;
+  margin: 50px;
 }
