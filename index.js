@@ -46,7 +46,13 @@ const createlipkg = (textboxlabel) => {
       } else if (checkbox.checked === false) {
         checkboxlabel.style.textDecoration = 'None';
       }
-    })
+    });
+    removelistbutton.addEventListener("click", () => {
+      TDLArr = TDLArr.filter((value) => {
+        return value !== checkboxlabel.innerHTML
+      });
+      updateHTMLList();
+    });
     //adds objects to lipkg
     lipkg.appendChild(checkbox);
     lipkg.appendChild(checkboxlabel);

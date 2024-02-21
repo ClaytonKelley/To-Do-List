@@ -1,3 +1,32 @@
+@import "https://unpkg.com/open-props" layer(design.system);
+@import "https://unpkg.com/open-props/normalize.min.css" 
+layer(demo.support);
+
 h1 {
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif, Courier, monospace;
   color: purple;
+}
+
+#lists {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  column-gap: normal;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  inline-size: var(--size-content-1);
+    aspect-ratio: var(--ratio-widescreen);
+    border: solid var(--size-2) transparent;
+    border-radius: var(--radius-4);
+    background: 
+      linear-gradient(var(--surface-1), var(--surface-1)) padding-box, 
+      var(--gradient-1) border-box;
+}
+
+#archive {
+  grid-column-start: 2;
 }
