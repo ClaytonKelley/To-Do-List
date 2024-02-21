@@ -2,10 +2,41 @@
 @import "https://unpkg.com/open-props/normalize.min.css" 
 layer(demo.support);
 
+@font-face {
+  font-family: FordFont;
+  src: url(fordscript/Fordscript.ttf);
+}
+
+body{
+  background: url("https://banner2.cleanpng.com/20181128/lkv/kisspng-vector-graphics-clip-art-image-flame-fire-cropped-logo-png-www-kaminipechi24-ru-5bfe5ea470a9e1.9518393715433970284615.jpg") repeat;
+  -webkit-animation: scrolling 15s linear infinite;
+  -moz-animation: scrolling 15s linear infinite;
+  -o-animation: scrolling 15s linear infinite;
+  animation: scrolling 15s linear infinite;
+  background-size: 25%;
+}
+
+@-webkit-keyframes scrolling {
+  from{
+      background-position: 0 0;
+  }
+  to{
+      background-position: 100% 100%;
+  }
+}
+
+
+
 h1 {
   text-align: center;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif, Courier, monospace;
-  color: purple;
+  font-family: FordFont;
+  color: rgb(218, 209, 218);
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(33, 33, 121);
+  border-radius: 30%;
+  border-width: 10px;
+  border-color: silver;
 }
 
 #lists {
@@ -18,15 +49,31 @@ h1 {
 ul {
   display: flex;
   flex-direction: column;
-  inline-size: var(--size-content-1);
     aspect-ratio: var(--ratio-widescreen);
     border: solid var(--size-2) transparent;
     border-radius: var(--radius-4);
     background: 
       linear-gradient(var(--surface-1), var(--surface-1)) padding-box, 
       var(--gradient-1) border-box;
+  width: 90%;
+  background-color: rgba(256, 256, 256, .5);
 }
 
 #archive {
   grid-column-start: 2;
+}
+
+
+.itemLabel {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: blue;
+  word-wrap: wrap;
+}
+
+#addItemForm {
+  display: flex;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  justify-items: center;
 }

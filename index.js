@@ -27,7 +27,7 @@ const createlipkg = (textboxlabel) => {
     let lipkg = document.createElement('li')
     let checkboxlabel = Object.assign(document.createElement('label'), {
       //id: '',
-      //class: '',
+      class: 'itemLabel',
       innerHTML: textboxlabel
     });
     //creates checkbox with attributes
