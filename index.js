@@ -6,6 +6,7 @@ let addItemButton = document.querySelector("#addItemButton");
 let listInputBox = document.querySelector("#listInputBox");
 let listInputString = "";
 
+//updates HTML from To do list array (TDL)
 const  addListItem = (item) => {
     TDLArr.push(listInputString);
     console.log(TDLArr);
@@ -21,6 +22,7 @@ const  updateHTMLList = () => {
     }
 };
 
+// function to
 const createlipkg = (textboxlabel) => {
     let lipkg = document.createElement('li')
     let checkboxlabel = Object.assign(document.createElement('label'), {
@@ -28,18 +30,16 @@ const createlipkg = (textboxlabel) => {
       //class: '',
       innerHTML: textboxlabel
     });
-
-    //let checkboxlabel = document.createElement('label')
-    //checkboxlabel.setAttribute('innerHTML', )
+    //creates checkbox with attributes
     let checkbox = Object.assign(document.createElement('input'), {
       type: 'checkbox',
     });
-    // document.createElement('input')
-    // checkbox.setAttribute('type', 'checkbox')
+    //creates remove list button with attributes
     let removelistbutton = Object.assign(document.createElement('button'), {
       type: 'button',
       innerHTML: 'Remove'
     });
+    // adds event-listener for strike through
     checkbox.addEventListener("change", (event) => {
       if (checkbox.checked === true) {
         checkboxlabel.style.textDecoration = 'line-through';
@@ -47,16 +47,16 @@ const createlipkg = (textboxlabel) => {
         checkboxlabel.style.textDecoration = 'None';
       }
     })
+    //adds objects to lipkg
     lipkg.appendChild(checkbox);
     lipkg.appendChild(checkboxlabel);
     lipkg.appendChild(removelistbutton);
     return lipkg;
 }
-
+// adds inputbox value to listinputstring
 listInputBox.addEventListener("input", (event) => {
     listInputString = event.target.value;
 });
 
-
-
+//eventlistner to call addListItm when Add Item button is clicked
 addItemButton.addEventListener("click", addListItem);
