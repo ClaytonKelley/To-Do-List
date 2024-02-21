@@ -24,7 +24,10 @@ const  updateHTMLList = () => {
 
 // function to
 const createlipkg = (textboxlabel) => {
-    let lipkg = document.createElement('li')
+    let lipkg = Object.assign(document.createElement('li'), {
+      //id: '',
+      class: 'listItem'
+    });
     let checkboxlabel = Object.assign(document.createElement('label'), {
       //id: '',
       class: 'itemLabel',
@@ -36,6 +39,7 @@ const createlipkg = (textboxlabel) => {
     });
     //creates remove list button with attributes
     let removelistbutton = Object.assign(document.createElement('button'), {
+      class: 'removeButton',
       type: 'button',
       innerHTML: 'Remove'
     });
