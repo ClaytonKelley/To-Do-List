@@ -40,6 +40,13 @@ const createlipkg = (textboxlabel) => {
       type: 'button',
       innerHTML: 'Remove'
     });
+    checkbox.addEventListener("change", (event) => {
+      if (checkbox.checked === true) {
+        checkboxlabel.style.textDecoration = 'line-through';
+      } else if (checkbox.checked === false) {
+        checkboxlabel.style.textDecoration = 'None';
+      }
+    })
     lipkg.appendChild(checkbox);
     lipkg.appendChild(checkboxlabel);
     lipkg.appendChild(removelistbutton);
@@ -49,5 +56,7 @@ const createlipkg = (textboxlabel) => {
 listInputBox.addEventListener("input", (event) => {
     listInputString = event.target.value;
 });
+
+
 
 addItemButton.addEventListener("click", addListItem);
