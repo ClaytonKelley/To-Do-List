@@ -41,7 +41,7 @@ const createlipkg = (textboxlabel) => {
     let removelistbutton = Object.assign(document.createElement('button'), {
       class: 'removeButton',
       type: 'button',
-      innerHTML: 'Remove'
+      innerHTML: "<img  height=25 width=25 src='Red_X.png'/>"
     });
     // adds event-listener for strike through
     checkbox.addEventListener("change", (event) => {
